@@ -41,7 +41,7 @@ python -m src.main
 
 ## Assets
 
-Images are optional. Drop PNGs into the folders under `assets/` using the names described in `ASSET_GENERATION.md`. Missing images do not crash the game; Loamwake draws readable fallback rectangles using the design palette.
+Images are optional. A Codex-generated reference sheet is included at `assets/ui/generated_asset_sheet.png`. The runtime loader expects individual PNGs in the folders under `assets/` using the names described in `ASSET_GENERATION.md`. Missing images do not crash the game; Loamwake draws readable fallback rectangles using the design palette.
 
 Procedural WAV files are created automatically in `assets/sounds/` when the game or tests touch the audio system.
 
