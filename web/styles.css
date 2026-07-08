@@ -1,0 +1,72 @@
+:root {
+  color-scheme: dark;
+  --deep-loam: #2a1b12;
+  --root-amber: #c8843a;
+  --mycelium-glow: #e8d98a;
+  --pore-mist: #bfc7c2;
+  --spring-cyan: #33d6d2;
+  --beetle-umber: #6b3f1d;
+  --worm-rose: #d978a0;
+  --fungal-green: #4f8a3d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--deep-loam);
+  color: var(--pore-mist);
+  font-family: Verdana, Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.shell {
+  width: min(100vw - 32px, 1280px);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--deep-loam);
+  border: 2px solid color-mix(in srgb, var(--root-amber), transparent 35%);
+  image-rendering: auto;
+}
+
+.touch-controls {
+  display: none;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.touch-controls button {
+  min-height: 44px;
+  border: 2px solid var(--root-amber);
+  border-radius: 8px;
+  background: #2a1b12;
+  color: var(--pore-mist);
+  font: 700 13px/1 Verdana, Arial, sans-serif;
+}
+
+@media (max-width: 720px), (pointer: coarse) {
+  body {
+    align-content: center;
+    overflow: auto;
+  }
+
+  .touch-controls {
+    display: grid;
+  }
+}

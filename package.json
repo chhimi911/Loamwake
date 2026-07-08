@@ -1,0 +1,15 @@
+{
+  "name": "loamwake-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vercel-ready browser build of Loamwake.",
+  "scripts": {
+    "build": "node scripts/build-web.js",
+    "dev": "node scripts/dev-server.js",
+    "start": "node scripts/dev-server.js",
+    "test:web": "node web/test-core.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

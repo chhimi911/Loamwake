@@ -1,10 +1,33 @@
 # Loamwake
 
-Loamwake is a fixed-room ecological puzzle platformer built with Python and Pygame. You rotate through three soil hosts by dying, and each death reshapes the room into new terrain that can open the route forward.
+Loamwake is a fixed-room ecological puzzle platformer. The repo now contains two playable builds:
 
-## Setup
+- A Vercel-ready browser version built with static HTML/CSS/Canvas.
+- The original local Python/Pygame prototype.
 
-Use Python 3.11 or newer.
+You rotate through three soil hosts by dying, and each death reshapes the room into new terrain that can open the route forward.
+
+## Web Version for Vercel
+
+The web version is what Vercel should deploy. It does not depend on Pygame or a Python server.
+
+```bash
+npm install
+npm run build
+npm run dev
+```
+
+Open:
+
+```text
+http://127.0.0.1:4173
+```
+
+Vercel uses `vercel.json`, runs `npm run build`, and serves the generated `dist/` folder. This prevents Vercel from treating `src/main.py` as a Python serverless function.
+
+## Python/Pygame Version
+
+Use Python 3.11 or newer for the local desktop prototype.
 
 ```bash
 python -m venv .venv
@@ -14,7 +37,7 @@ pip install -r requirements.txt
 
 If your Mac does not have a `python` command, use `python3` for the setup commands.
 
-## Run
+Run:
 
 ```bash
 python -m src.main
@@ -54,6 +77,8 @@ Procedural WAV files are created automatically in `assets/sounds/` when the game
 ## Checks
 
 ```bash
+npm run build
+npm run test:web
 python -m compileall src
 python -m pytest
 ```
