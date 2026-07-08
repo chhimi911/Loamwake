@@ -1,0 +1,14 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+src/
+tests/
+requirements.txt
+AGENTS.md
+ASSET_GENERATION.md
+CODEX_PROMPT.md
+DESIGN.md
+README_START_HERE.md
+TASKS.md
+spec.md
